@@ -14,7 +14,7 @@ module.exports = async(req, res) => {
                 res.json({ result: "false" });
             } else {
                 try {
-                    var sid = response.body.split('"song":{"type":"')[1].split('","image":')[0].split('"')[8];
+                    var sid = response.body.split('"song":{"type":"')[1].split('","image":')[0].split('"')[50];
                 } catch (err) {
                     var sid = response.body.split('"params":{"pid":"')[1].split('"')[0];
                 }
